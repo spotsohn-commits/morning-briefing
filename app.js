@@ -171,14 +171,72 @@ async function loadMarket() {
 }
 
 // ---------- 오늘의 단어 ----------
+// ---------- 인앱 브라우저(카톡 등) 감지 → 기본 브라우저로 열기 ----------
+const UA = navigator.userAgent;
+const IS_IOS = /iPhone|iPad|iPod/i.test(UA);
+const IS_ANDROID = /Android/i.test(UA);
+const IN_APP =
+  /KAKAOTALK/i.test(UA) ? "카카오톡" :
+  /NAVER\(inapp/i.test(UA) ? "네이버 앱" :
+  /Instagram/i.test(UA) ? "인스타그램" :
+  /FBAN|FBAV/i.test(UA) ? "페이스북" :
+  /\bLine\//i.test(UA) ? "라인" :
+  /DaumApps/i.test(UA) ? "다음 앱" :
+  IS_ANDROID && /; wv\)/.test(UA) ? "앱" : null;
+
+function openExternal() {
+  const url = location.href;
+  if (/KAKAOTALK/i.test(UA)) {
+    location.href = "kakaotalk://web/openExternal?url=" + encodeURIComponent(url);
+  } else if (/\bLine\//i.test(UA)) {
+    location.href = url + (url.includes("?") ? "&" : "?") + "openExternalBrowser=1";
+  } else if (IS_ANDROID) {
+    location.href = "intent://" + url.replace(/^https?:\/\//, "") + "#Intent;scheme=https;package=com.android.chrome;end";
+  } else {
+    alert("오른쪽 아래(또는 위) ··· 메뉴에서 'Safari로 열기'(기본 브라우저로 열기)를 눌러주세요.");
+  }
+}
+
+function setupInAppBanner() {
+  if (!IN_APP) return;
+  const bar = $("#inapp");
+  $("#inapp-name").textContent = IN_APP;
+  bar.hidden = false;
+  $("#inapp-open").onclick = openExternal;
+}
+
+// ---------- 발음 듣기 ----------
+function pickVoice(lang) {
+  const voices = speechSynthesis.getVoices();
+  const base = lang.split("-")[0];
+  return voices.find((v) => v.lang.replace("_", "-") === lang) ||
+    voices.find((v) => v.lang.toLowerCase().startsWith(base));
+}
+
 function speak(text, lang) {
-  if (!("speechSynthesis" in window)) return alert("이 브라우저는 음성 읽기를 지원하지 않아요.");
+  if (!("speechSynthesis" in window)) {
+    if (IN_APP) {
+      if (confirm(`${IN_APP} 안의 브라우저는 발음 듣기를 지원하지 않아요.\n기본 브라우저(${IS_IOS ? "Safari" : "Chrome"})로 열까요?`)) openExternal();
+    } else {
+      alert(`이 브라우저는 발음 듣기를 지원하지 않아요.\n${IS_IOS ? "Safari" : "Chrome"}로 열어주세요.`);
+    }
+    return;
+  }
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = lang;
   u.rate = 0.85;
+  const v = pickVoice(lang);
+  if (v) u.voice = v;
+  u.onerror = (e) => {
+    if (e.error !== "canceled" && e.error !== "interrupted") {
+      alert("음성을 재생하지 못했어요. 폰 설정에서 해당 언어 음성(TTS)이 설치돼 있는지 확인해 주세요.");
+    }
+  };
   speechSynthesis.speak(u);
 }
+// 일부 브라우저는 목소리 목록을 늦게 불러오므로 미리 요청
+if ("speechSynthesis" in window) speechSynthesis.getVoices();
 
 function renderWord(card, list, idx) {
   const w = list[((idx % list.length) + list.length) % list.length];
@@ -232,6 +290,7 @@ if ("serviceWorker" in navigator) {
 
 renderHeader();
 setupShare();
+setupInAppBanner();
 loadWeather();
 loadMarket();
 loadFx();

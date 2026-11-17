@@ -1,5 +1,5 @@
 // 서비스워커: 앱 화면은 캐시해서 빠르게 열고, 데이터는 항상 새로 받아오되 실패하면 캐시 사용
-const CACHE = "morning-v3";
+const CACHE = "morning-v4";
 const SHELL = ["./", "index.html", "style.css", "app.js", "manifest.json", "icons/icon-192.png",
   "data/ai_terms.json", "data/en.json", "data/zh.json", "data/ja.json"];
 
