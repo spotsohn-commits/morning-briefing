@@ -144,12 +144,14 @@ function fmtPrice(x) {
 function marketGroup(title, list) {
   if (!list.length) return "";
   const date = list.find((x) => x.date)?.date;
-  const md = date ? ` <span class="mdate">${Number(date.slice(5, 7))}/${Number(date.slice(8, 10))} 종가</span>` : "";
-  return `<h3 class="mgroup">${title}${md}</h3><ul class="mlist">${list.map((x) => {
+  const md = (s) => `${Number(s.slice(5, 7))}/${Number(s.slice(8, 10))}`;
+  const head = date ? ` <span class="mdate">${md(date)} 종가</span>` : "";
+  return `<h3 class="mgroup">${title}${head}</h3><ul class="mlist">${list.map((x) => {
     if (x.close == null) return `<li><span class="mname">${esc(x.name)}</span><span class="mval muted">-</span></li>`;
     const cls = x.change > 0 ? "up" : x.change < 0 ? "down" : "";
     const arrow = x.change > 0 ? "▲" : x.change < 0 ? "▼" : "–";
-    return `<li><span class="mname">${esc(x.name)}</span>
+    const own = x.date && x.date !== date ? ` <span class="mdate">(${md(x.date)})</span>` : "";
+    return `<li><span class="mname">${esc(x.name)}${own}</span>
       <span class="mval">${fmtPrice(x)}</span>
       <span class="mchg ${cls}">${arrow} ${Math.abs(x.changePct).toFixed(2)}%</span></li>`;
   }).join("")}</ul>`;
