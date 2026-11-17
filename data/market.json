@@ -1,0 +1,85 @@
+{
+  "updated": "2026-11-17T08:07:48.220Z",
+  "items": [
+    {
+      "symbol": "^KS11",
+      "name": "코스피",
+      "group": "kr",
+      "currency": "KRW",
+      "close": 4968.47998046875,
+      "change": -132.02001953125,
+      "changePct": -2.5883740717821784,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "^KQ11",
+      "name": "코스닥",
+      "group": "kr",
+      "currency": "KRW",
+      "close": 650.0599975585938,
+      "change": -15.59002685546875,
+      "changePct": -2.3420756078529177,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "005930.KS",
+      "name": "삼성전자",
+      "group": "kr",
+      "currency": "KRW",
+      "close": 190300,
+      "change": -6500,
+      "changePct": -3.3028455284552845,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "000660.KS",
+      "name": "SK하이닉스",
+      "group": "kr",
+      "currency": "KRW",
+      "close": 1098000,
+      "change": -22000,
+      "changePct": -1.9642857142857142,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "^DJI",
+      "name": "다우존스",
+      "group": "us",
+      "currency": "USD",
+      "close": 51608.171875,
+      "change": -739.37890625,
+      "changePct": -1.4124422159495433,
+      "date": "2026-11-16"
+    },
+    {
+      "symbol": "^IXIC",
+      "name": "나스닥",
+      "group": "us",
+      "currency": "USD",
+      "close": 24509.759765625,
+      "change": -626.509765625,
+      "changePct": -2.492453245085188,
+      "date": "2026-11-16"
+    },
+    {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "group": "us",
+      "currency": "USD",
+      "close": 7416.58984375,
+      "change": -145.080078125,
+      "changePct": -1.9186248490601372,
+      "date": "2026-11-16"
+    },
+    {
+      "symbol": "SOXL",
+      "name": "SOXL",
+      "group": "us",
+      "currency": "USD",
+      "close": 48.7599983215332,
+      "change": -9.560001373291016,
+      "changePct": -16.392320684698916,
+      "date": "2026-11-16"
+    }
+  ]
+}

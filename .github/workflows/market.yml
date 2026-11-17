@@ -1,0 +1,26 @@
+name: 아침 시세 수집
+
+on:
+  schedule:
+    - cron: "30 21 * * *"   # 매일 KST 06:30 (UTC 21:30)
+  workflow_dispatch:        # Actions 탭에서 수동 실행 가능
+
+permissions:
+  contents: write
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/fetch_market.mjs
+      - name: 변경 사항 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/market.json
+          git diff --cached --quiet || git commit -m "시세 업데이트 $(date -u +%F)"
+          git push

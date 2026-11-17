@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>모닝 브리핑</title>
+  <meta name="description" content="오늘의 날씨, 전날 증시 종가, 환율, 그리고 오늘의 단어">
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="모닝 브리핑">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <p class="date" id="today"></p>
+    <h1 id="greeting">좋은 아침이에요</h1>
+  </header>
+
+  <main>
+    <section class="card" id="weather">
+      <h2>☀️ 오늘의 날씨</h2>
+      <div class="body"><p class="muted">불러오는 중…</p></div>
+    </section>
+
+    <section class="card" id="market">
+      <h2>📈 전날 증시 종가</h2>
+      <div class="body"><p class="muted">불러오는 중…</p></div>
+    </section>
+
+    <section class="card" id="fx">
+      <h2>💱 환율</h2>
+      <div class="body"><p class="muted">불러오는 중…</p></div>
+    </section>
+
+    <section class="card word" id="w-ai" data-set="ai_terms">
+      <h2>🤖 오늘의 AI 용어</h2>
+      <div class="body"></div>
+    </section>
+
+    <section class="card word" id="w-en" data-set="en" data-lang="en-US">
+      <h2>🇺🇸 오늘의 영어</h2>
+      <div class="body"></div>
+    </section>
+
+    <section class="card word" id="w-zh" data-set="zh" data-lang="zh-CN">
+      <h2>🇨🇳 오늘의 중국어</h2>
+      <div class="body"></div>
+    </section>
+
+    <section class="card word" id="w-ja" data-set="ja" data-lang="ja-JP">
+      <h2>🇯🇵 오늘의 일본어</h2>
+      <div class="body"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="install-hint" class="muted">
+      홈 화면에 추가하면 앱처럼 쓸 수 있어요.<br>
+      iPhone: Safari 공유 버튼 → <b>홈 화면에 추가</b> · Android: Chrome 메뉴 → <b>앱 설치</b>
+    </p>
+    <button id="share" class="link">지인에게 공유하기</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
