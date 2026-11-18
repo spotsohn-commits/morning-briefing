@@ -135,17 +135,21 @@ async function loadFx() {
 
 // ---------- 전날 종가 (GitHub Actions가 매일 만드는 data/market.json) ----------
 function fmtPrice(x) {
+  if (x.group === "crypto") {
+    const digits = x.close < 1000 ? 1 : 0;
+    return new Intl.NumberFormat("ko-KR", { maximumFractionDigits: digits }).format(x.close) + "원";
+  }
   const isStockKRW = x.currency === "KRW" && !x.symbol.startsWith("^");
   if (isStockKRW) return new Intl.NumberFormat("ko-KR").format(Math.round(x.close)) + "원";
   const n = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(x.close);
   return x.symbol.startsWith("^") ? n : "$" + n;
 }
 
-function marketGroup(title, list) {
+function marketGroup(title, list, label = "종가") {
   if (!list.length) return "";
   const date = list.find((x) => x.date)?.date;
   const md = (s) => `${Number(s.slice(5, 7))}/${Number(s.slice(8, 10))}`;
-  const head = date ? ` <span class="mdate">${md(date)} 종가</span>` : "";
+  const head = date ? ` <span class="mdate">${md(date)} ${label}</span>` : "";
   return `<h3 class="mgroup">${title}${head}</h3><ul class="mlist">${list.map((x) => {
     if (x.close == null) return `<li><span class="mname">${esc(x.name)}</span><span class="mval muted">-</span></li>`;
     const cls = x.change > 0 ? "up" : x.change < 0 ? "down" : "";
@@ -163,7 +167,8 @@ async function loadMarket() {
     if (!d.items?.length) return fail("market", "아직 수집된 시세가 없어요.");
     $("#market .body").innerHTML =
       marketGroup("🇰🇷 국내", d.items.filter((x) => x.group === "kr")) +
-      marketGroup("🇺🇸 미국", d.items.filter((x) => x.group === "us"));
+      marketGroup("🇺🇸 미국", d.items.filter((x) => x.group === "us")) +
+      marketGroup("🪙 코인", d.items.filter((x) => x.group === "crypto"), "밤 12시 기준 · 업비트");
   } catch (e) {
     console.warn(e);
     fail("market");

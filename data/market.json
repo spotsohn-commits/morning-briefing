@@ -1,25 +1,25 @@
 {
-  "updated": "2026-11-17T22:25:05.529Z",
+  "updated": "2026-11-18T05:23:18.016Z",
   "items": [
     {
       "symbol": "^KS11",
       "name": "코스피",
       "group": "kr",
       "currency": "KRW",
-      "close": 5100.5,
-      "change": -190.02978515625,
-      "changePct": -3.591885744399749,
-      "date": "2026-11-16"
+      "close": 4968.47998046875,
+      "change": -132.02001953125,
+      "changePct": -2.5883740717821784,
+      "date": "2026-11-17"
     },
     {
       "symbol": "^KQ11",
       "name": "코스닥",
       "group": "kr",
       "currency": "KRW",
-      "close": 665.6500244140625,
-      "change": -34.00994873046875,
-      "changePct": -4.860925311707548,
-      "date": "2026-11-16"
+      "close": 650.0599975585938,
+      "change": -15.59002685546875,
+      "changePct": -2.3420756078529177,
+      "date": "2026-11-17"
     },
     {
       "symbol": "005930.KS",
@@ -56,9 +56,9 @@
       "name": "나스닥",
       "group": "us",
       "currency": "USD",
-      "close": 24328.3828125,
-      "change": -181.376953125,
-      "changePct": -0.7400193019410237,
+      "close": 24328.380859375,
+      "change": -181.37890625,
+      "changePct": -0.7400272707053799,
       "date": "2026-11-17"
     },
     {
@@ -79,6 +79,36 @@
       "close": 49.06999969482422,
       "change": 0.3100013732910156,
       "changePct": 0.6357698604639082,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "KRW-BTC",
+      "name": "비트코인",
+      "group": "crypto",
+      "currency": "KRW",
+      "close": 88359000,
+      "change": -575000,
+      "changePct": -0.6465468774596892,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "KRW-ETH",
+      "name": "이더리움",
+      "group": "crypto",
+      "currency": "KRW",
+      "close": 2463000,
+      "change": -56000,
+      "changePct": -2.22310440651052,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "KRW-XRP",
+      "name": "리플",
+      "group": "crypto",
+      "currency": "KRW",
+      "close": 1323,
+      "change": 7,
+      "changePct": 0.5319148936170213,
       "date": "2026-11-17"
     }
   ]

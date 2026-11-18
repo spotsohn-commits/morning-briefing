@@ -39,11 +39,40 @@ async function fetchOne(s) {
   };
 }
 
-const results = await Promise.allSettled(SYMBOLS.map(fetchOne));
+// ---------- 코인: 업비트 원화 가격, 전날 밤 12시(KST) 기준 ----------
+const COINS = [
+  { symbol: "KRW-BTC", name: "비트코인", group: "crypto" },
+  { symbol: "KRW-ETH", name: "이더리움", group: "crypto" },
+  { symbol: "KRW-XRP", name: "리플", group: "crypto" },
+];
+
+// 가장 최근 지나간 KST 자정 (UTC로는 전날 15:00)
+function lastKstMidnight() {
+  const kstNow = new Date(Date.now() + 9 * 3600 * 1000);
+  const midnightKstAsUtc = Date.UTC(kstNow.getUTCFullYear(), kstNow.getUTCMonth(), kstNow.getUTCDate());
+  return new Date(midnightKstAsUtc - 9 * 3600 * 1000);
+}
+
+async function fetchCoin(c) {
+  const midnight = lastKstMidnight();
+  const to = midnight.toISOString().replace(".000Z", "Z");
+  const url = `https://api.upbit.com/v1/candles/minutes/60?market=${c.symbol}&to=${to}&count=25`;
+  const res = await fetch(url, { headers: { accept: "application/json" }, signal: AbortSignal.timeout(15000) });
+  if (!res.ok) throw new Error(`${c.symbol}: HTTP ${res.status}`);
+  const candles = await res.json(); // 최신순: [0] = 23:00~24:00 KST
+  if (candles.length < 25) throw new Error(`${c.symbol}: 데이터 부족`);
+  const close = candles[0].trade_price, prev = candles[24].trade_price;
+  // 자정 직전 날짜 (예: 11/18 00:00 → "2026-11-17")
+  const date = candles[0].candle_date_time_kst.slice(0, 10);
+  return { ...c, currency: "KRW", close, change: close - prev, changePct: ((close - prev) / prev) * 100, date };
+}
+
+const ALL = [...SYMBOLS, ...COINS];
+const results = await Promise.allSettled([...SYMBOLS.map(fetchOne), ...COINS.map(fetchCoin)]);
 const items = results.map((r, i) => {
   if (r.status === "fulfilled") return r.value;
   console.warn("실패:", r.reason.message);
-  return { ...SYMBOLS[i], close: null };
+  return { ...ALL[i], close: null };
 });
 items.forEach((x) => console.log(x.name.padEnd(8), x.date ?? "-", x.close?.toFixed(2) ?? "실패", x.changePct?.toFixed(2) ?? ""));
 

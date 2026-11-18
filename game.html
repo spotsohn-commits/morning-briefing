@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>단어 게임</title>
+  <meta name="description" content="지금까지 나온 영어 단어로 푸는 빈칸 퀴즈">
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top game-top">
+    <a class="back" href="./">← 브리핑으로</a>
+    <h1>🎮 영어 단어 게임</h1>
+    <p class="muted" id="pool-note"></p>
+  </header>
+
+  <main>
+    <section class="card" id="game">
+      <div class="body"><p class="muted">불러오는 중…</p></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
