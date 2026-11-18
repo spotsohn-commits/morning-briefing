@@ -11,6 +11,9 @@ const SYMBOLS = [
   { symbol: "^IXIC", name: "나스닥", group: "us" },
   { symbol: "^GSPC", name: "S&P 500", group: "us" },
   { symbol: "SOXL", name: "SOXL", group: "us" },
+  { symbol: "GC=F", name: "금 (온스)", group: "cmd" },
+  { symbol: "SI=F", name: "은 (온스)", group: "cmd" },
+  { symbol: "CL=F", name: "WTI 원유 (배럴)", group: "cmd" },
 ];
 
 async function fetchOne(s) {

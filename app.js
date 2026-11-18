@@ -168,6 +168,7 @@ async function loadMarket() {
     $("#market .body").innerHTML =
       marketGroup("🇰🇷 국내", d.items.filter((x) => x.group === "kr")) +
       marketGroup("🇺🇸 미국", d.items.filter((x) => x.group === "us")) +
+      marketGroup("🛢️ 원자재", d.items.filter((x) => x.group === "cmd")) +
       marketGroup("🪙 코인", d.items.filter((x) => x.group === "crypto"), "밤 12시 기준 · 업비트");
   } catch (e) {
     console.warn(e);
