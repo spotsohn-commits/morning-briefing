@@ -1,45 +1,45 @@
 {
-  "updated": "2026-11-18T05:25:41.392Z",
+  "updated": "2026-11-18T13:20:15.916Z",
   "items": [
     {
       "symbol": "^KS11",
       "name": "코스피",
       "group": "kr",
       "currency": "KRW",
-      "close": 4968.47998046875,
-      "change": -132.02001953125,
-      "changePct": -2.5883740717821784,
-      "date": "2026-11-17"
+      "close": 5067.43994140625,
+      "change": 98.9599609375,
+      "changePct": 1.991755251636611,
+      "date": "2026-11-18"
     },
     {
       "symbol": "^KQ11",
       "name": "코스닥",
       "group": "kr",
       "currency": "KRW",
-      "close": 650.0599975585938,
-      "change": -15.59002685546875,
-      "changePct": -2.3420756078529177,
-      "date": "2026-11-17"
+      "close": 662.8099975585938,
+      "change": 12.75,
+      "changePct": 1.9613574205280593,
+      "date": "2026-11-18"
     },
     {
       "symbol": "005930.KS",
       "name": "삼성전자",
       "group": "kr",
       "currency": "KRW",
-      "close": 190300,
-      "change": -6500,
-      "changePct": -3.3028455284552845,
-      "date": "2026-11-17"
+      "close": 194700,
+      "change": 4400,
+      "changePct": 2.312138728323699,
+      "date": "2026-11-18"
     },
     {
       "symbol": "000660.KS",
       "name": "SK하이닉스",
       "group": "kr",
       "currency": "KRW",
-      "close": 1098000,
-      "change": -22000,
-      "changePct": -1.9642857142857142,
-      "date": "2026-11-17"
+      "close": 1144000,
+      "change": 46000,
+      "changePct": 4.189435336976321,
+      "date": "2026-11-18"
     },
     {
       "symbol": "^DJI",
@@ -79,6 +79,36 @@
       "close": 49.06999969482422,
       "change": 0.3100013732910156,
       "changePct": 0.6357698604639082,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "GC=F",
+      "name": "금 (온스)",
+      "group": "cmd",
+      "currency": "USD",
+      "close": 3864.199951171875,
+      "change": 11.199951171875,
+      "changePct": 0.2906813177232027,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "SI=F",
+      "name": "은 (온스)",
+      "group": "cmd",
+      "currency": "USD",
+      "close": 47.28799819946289,
+      "change": 0.5029983520507812,
+      "changePct": 1.075127399147794,
+      "date": "2026-11-17"
+    },
+    {
+      "symbol": "CL=F",
+      "name": "WTI 원유 (배럴)",
+      "group": "cmd",
+      "currency": "USD",
+      "close": 86.01000213623047,
+      "change": 0.29000091552734375,
+      "changePct": 0.33831184250765345,
       "date": "2026-11-17"
     },
     {
