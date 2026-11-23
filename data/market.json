@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T22:17:07.717Z",
+  "updated": "2026-11-23T22:23:04.464Z",
   "items": [
     {
       "symbol": "^KS11",
@@ -26,60 +26,60 @@
       "name": "삼성전자",
       "group": "kr",
       "currency": "KRW",
-      "close": 183100,
-      "change": -13800,
-      "changePct": -7.0086338242762825,
-      "date": "2026-11-20"
+      "close": 177500,
+      "change": -5600,
+      "changePct": -3.0584380120152925,
+      "date": "2026-11-23"
     },
     {
       "symbol": "000660.KS",
       "name": "SK하이닉스",
       "group": "kr",
       "currency": "KRW",
-      "close": 1113000,
-      "change": -70000,
-      "changePct": -5.9171597633136095,
-      "date": "2026-11-20"
+      "close": 1085000,
+      "change": -28000,
+      "changePct": -2.515723270440252,
+      "date": "2026-11-23"
     },
     {
       "symbol": "^DJI",
       "name": "다우존스",
       "group": "us",
       "currency": "USD",
-      "close": 48147.328125,
-      "change": -949.73046875,
-      "changePct": -1.9343938230770092,
-      "date": "2026-11-20"
+      "close": 49595.30859375,
+      "change": 1447.98046875,
+      "changePct": 3.0073952701814646,
+      "date": "2026-11-23"
     },
     {
       "symbol": "^IXIC",
       "name": "나스닥",
       "group": "us",
       "currency": "USD",
-      "close": 22617.73046875,
-      "change": -1261.46875,
-      "changePct": -5.282709601959734,
-      "date": "2026-11-20"
+      "close": 24089.55859375,
+      "change": 1471.828125,
+      "changePct": 6.50740854407813,
+      "date": "2026-11-23"
     },
     {
       "symbol": "^GSPC",
       "name": "S&P 500",
       "group": "us",
       "currency": "USD",
-      "close": 6910.39013671875,
-      "change": -265.43994140625,
-      "changePct": -3.6990834302978346,
-      "date": "2026-11-20"
+      "close": 7237.169921875,
+      "change": 326.77978515625,
+      "changePct": 4.728818180899615,
+      "date": "2026-11-23"
     },
     {
       "symbol": "SOXL",
       "name": "SOXL",
       "group": "us",
       "currency": "USD",
-      "close": 30.8799991607666,
-      "change": -14.420000076293945,
-      "changePct": -31.83223028510947,
-      "date": "2026-11-20"
+      "close": 43.209999084472656,
+      "change": 12.329999923706055,
+      "changePct": 39.928757314771765,
+      "date": "2026-11-23"
     },
     {
       "symbol": "GC=F",
@@ -96,9 +96,9 @@
       "name": "은 (온스)",
       "group": "cmd",
       "currency": "USD",
-      "close": 41.06999969482422,
-      "change": -3.2480010986328125,
-      "changePct": -7.328852927662606,
+      "close": 41.03499984741211,
+      "change": -3.283000946044922,
+      "changePct": -7.407827264919435,
       "date": "2026-11-20"
     },
     {
@@ -106,9 +106,9 @@
       "name": "WTI 원유 (배럴)",
       "group": "cmd",
       "currency": "USD",
-      "close": 83.41000366210938,
-      "change": 0.20000457763671875,
-      "changePct": 0.24036123042577998,
+      "close": 83.9800033569336,
+      "change": 0.7700042724609375,
+      "changePct": 0.9253746916632567,
       "date": "2026-11-20"
     },
     {
@@ -116,30 +116,30 @@
       "name": "비트코인",
       "group": "crypto",
       "currency": "KRW",
-      "close": 83214000,
-      "change": 570000,
-      "changePct": 0.6897052417598374,
-      "date": "2026-11-22"
+      "close": 85534000,
+      "change": 2320000,
+      "changePct": 2.787992405124138,
+      "date": "2026-11-23"
     },
     {
       "symbol": "KRW-ETH",
       "name": "이더리움",
       "group": "crypto",
       "currency": "KRW",
-      "close": 2339000,
-      "change": 22000,
-      "changePct": 0.9495036685369012,
-      "date": "2026-11-22"
+      "close": 2415000,
+      "change": 76000,
+      "changePct": 3.2492518170158182,
+      "date": "2026-11-23"
     },
     {
       "symbol": "KRW-XRP",
       "name": "리플",
       "group": "crypto",
       "currency": "KRW",
-      "close": 1262,
-      "change": -13,
-      "changePct": -1.019607843137255,
-      "date": "2026-11-22"
+      "close": 1347,
+      "change": 85,
+      "changePct": 6.735340729001585,
+      "date": "2026-11-23"
     }
   ]
 }
