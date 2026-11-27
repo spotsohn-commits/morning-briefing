@@ -1,145 +1,145 @@
 {
-  "updated": "2026-11-26T22:27:42.355Z",
+  "updated": "2026-11-27T22:27:33.691Z",
   "items": [
     {
       "symbol": "^KS11",
       "name": "코스피",
       "group": "kr",
       "currency": "KRW",
-      "close": 4697.509765625,
-      "change": -308.52001953125,
-      "changePct": -6.16296811589227,
-      "date": "2026-11-25"
+      "close": 4711.2099609375,
+      "change": 13.7001953125,
+      "changePct": 0.2916480432409958,
+      "date": "2026-11-26"
     },
     {
       "symbol": "^KQ11",
       "name": "코스닥",
       "group": "kr",
       "currency": "KRW",
-      "close": 650.6400146484375,
-      "change": -15.239990234375,
-      "changePct": -2.2886991834297636,
-      "date": "2026-11-25"
+      "close": 655.7100219726562,
+      "change": 5.07000732421875,
+      "changePct": 0.7792338635917195,
+      "date": "2026-11-26"
     },
     {
       "symbol": "005930.KS",
       "name": "삼성전자",
       "group": "kr",
       "currency": "KRW",
-      "close": 171300,
-      "change": 600,
-      "changePct": 0.35149384885764495,
-      "date": "2026-11-26"
+      "close": 179100,
+      "change": 7800,
+      "changePct": 4.553415061295972,
+      "date": "2026-11-27"
     },
     {
       "symbol": "000660.KS",
       "name": "SK하이닉스",
       "group": "kr",
       "currency": "KRW",
-      "close": 1053000,
-      "change": 23000,
-      "changePct": 2.233009708737864,
-      "date": "2026-11-26"
+      "close": 1110000,
+      "change": 57000,
+      "changePct": 5.413105413105413,
+      "date": "2026-11-27"
     },
     {
       "symbol": "^DJI",
       "name": "다우존스",
       "group": "us",
       "currency": "USD",
-      "close": 50182.94921875,
-      "change": 164.25,
-      "changePct": 0.3283771920610628,
-      "date": "2026-11-25"
+      "close": 50774.94140625,
+      "change": 591.9921875,
+      "changePct": 1.179667988263257,
+      "date": "2026-11-27"
     },
     {
       "symbol": "^IXIC",
       "name": "나스닥",
       "group": "us",
       "currency": "USD",
-      "close": 23585.80078125,
-      "change": -147.73828125,
-      "changePct": -0.6224873621289493,
-      "date": "2026-11-25"
+      "close": 24129.5,
+      "change": 543.69921875,
+      "changePct": 2.3051971980625923,
+      "date": "2026-11-27"
     },
     {
       "symbol": "^GSPC",
       "name": "S&P 500",
       "group": "us",
       "currency": "USD",
-      "close": 7182.77978515625,
-      "change": -18.31005859375,
-      "changePct": -0.2542678815435381,
-      "date": "2026-11-25"
+      "close": 7297.490234375,
+      "change": 114.71044921875,
+      "changePct": 1.5970202713969834,
+      "date": "2026-11-27"
     },
     {
       "symbol": "SOXL",
       "name": "SOXL",
       "group": "us",
       "currency": "USD",
-      "close": 32.02000045776367,
-      "change": -0.5799980163574219,
-      "changePct": -1.779135102775672,
-      "date": "2026-11-25"
+      "close": 36.56999969482422,
+      "change": 4.549999237060547,
+      "changePct": 14.209866246136608,
+      "date": "2026-11-27"
     },
     {
       "symbol": "GC=F",
       "name": "금 (온스)",
       "group": "cmd",
       "currency": "USD",
-      "close": 3593.39990234375,
-      "change": 57.599853515625,
-      "changePct": 1.6290472515468006,
-      "date": "2026-11-26"
+      "close": 3668.5,
+      "change": 132.699951171875,
+      "changePct": 3.7530388975433135,
+      "date": "2026-11-27"
     },
     {
       "symbol": "SI=F",
       "name": "은 (온스)",
       "group": "cmd",
       "currency": "USD",
-      "close": 41.75,
-      "change": 1.6980018615722656,
-      "changePct": 4.23949350967118,
-      "date": "2026-11-26"
+      "close": 43.70199966430664,
+      "change": 3.6500015258789062,
+      "changePct": 9.113157134542375,
+      "date": "2026-11-27"
     },
     {
       "symbol": "CL=F",
       "name": "WTI 원유 (배럴)",
       "group": "cmd",
       "currency": "USD",
-      "close": 84.91000366210938,
-      "change": 1.2300033569335938,
-      "changePct": 1.4698892835179824,
-      "date": "2026-11-26"
+      "close": 83.08000183105469,
+      "change": -0.5999984741210938,
+      "changePct": -0.717015382329035,
+      "date": "2026-11-27"
     },
     {
       "symbol": "KRW-BTC",
       "name": "비트코인",
       "group": "crypto",
       "currency": "KRW",
-      "close": 82428000,
-      "change": 2975000,
-      "changePct": 3.744352006846815,
-      "date": "2026-11-26"
+      "close": 80512000,
+      "change": -1916000,
+      "changePct": -2.3244528558256903,
+      "date": "2026-11-27"
     },
     {
       "symbol": "KRW-ETH",
       "name": "이더리움",
       "group": "crypto",
       "currency": "KRW",
-      "close": 2305000,
-      "change": 59000,
-      "changePct": 2.626892252894034,
-      "date": "2026-11-26"
+      "close": 2250000,
+      "change": -55000,
+      "changePct": -2.386117136659436,
+      "date": "2026-11-27"
     },
     {
       "symbol": "KRW-XRP",
       "name": "리플",
       "group": "crypto",
       "currency": "KRW",
-      "close": 1289,
-      "change": 55,
-      "changePct": 4.457050243111831,
-      "date": "2026-11-26"
+      "close": 1276,
+      "change": -13,
+      "changePct": -1.008533747090768,
+      "date": "2026-11-27"
     }
   ]
 }
